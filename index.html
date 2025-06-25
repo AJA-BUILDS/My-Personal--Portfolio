@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amjad Ali - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="experience.html" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Animated Starfield Background -->
+        <div class="hero-background">
+            <canvas id="starfield"></canvas>
+        </div>
+        
+        <div class="hero-container">
+            <span class="logo-text"><span class="logo-icon"><i class="fas fa-layer-group"></i></span> Portfolio</span>
+            <div class="hero-logo-spacer"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line typing-text">Hi, I'm</span>
+                    <span class="title-name glitch-text" data-text="Amjad Ali">Amjad Ali</span>
+                    <span class="title-role gradient-text">Full Stack Developer</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="typing-subtitle">Crafting seamless digital experiences from frontend to backend. 
+                    I build scalable web applications with modern technologies and clean code.</span>
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary glow-button" onclick="scrollToSection('projects')">
+                        <span class="btn-text">View My Projects</span>
+                        <i class="fas fa-arrow-right btn-icon"></i>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <button class="btn btn-secondary pulse-button" id="contactInfoBtn">
+                        <span class="btn-text">Get In Touch</span>
+                        <i class="fas fa-envelope btn-icon"></i>
+                        <div class="btn-pulse"></div>
+                    </button>
+                    <a class="btn btn-primary glow-button" href="assets/modern-cv.pdf" download>
+                        <span class="btn-text">Download Resume</span>
+                        <i class="fas fa-download btn-icon"></i>
+                        <div class="btn-glow"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <div class="scroll-text">Scroll to explore</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-container" data-aos="fade-up">
+                        <div class="profile-image-wrapper">
+                            <img id="profileImage" src="assets/profile.jpg" alt="Amjad Ali" class="profile-image" style="display: block;">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-text">
+                        <p class="about-description">
+                            I'm Amjad Ali, a <span class="about-highlight">Full Stack Developer</span> specializing in building robust, scalable web applications. I blend clean code with modern design to deliver seamless, high-performance digital experiences.
+                        </p>
+                        <p class="about-description">
+                            I excel at solving complex problems and thrive on staying ahead with the latest technologies. My focus is on creating user-centric solutions that drive results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivational Video Section removed as requested -->
+
+    <!-- Computer Science Showcase Section -->
+    <!-- Removed cs-showcase section as requested -->
+
+    <!-- Highlights as separate, pressable sections -->
+    <section id="highlight-cs" class="highlight-section pressable-card">
+        <div class="container">
+            <div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3 class="highlight-title">Computer Science Graduate</h3>
+            <p class="highlight-desc">Solid academic foundation in computer science, algorithms, and software engineering principles.</p>
+        </div>
+    </section>
+    <section id="highlight-fullstack" class="highlight-section pressable-card">
+        <div class="container">
+            <div class="highlight-icon"><i class="fas fa-code"></i></div>
+            <h3 class="highlight-title">Full-Stack Development</h3>
+            <p class="highlight-desc">Experienced in building scalable web applications from frontend to backend.</p>
+        </div>
+    </section>
+    <section id="highlight-uiux" class="highlight-section pressable-card">
+        <div class="container">
+            <div class="highlight-icon"><i class="fas fa-palette"></i></div>
+            <h3 class="highlight-title">UI/UX Enthusiast</h3>
+            <p class="highlight-desc">Passionate about creating beautiful, user-friendly interfaces and experiences.</p>
+        </div>
+    </section>
+    <section id="highlight-problem" class="highlight-section pressable-card">
+        <div class="container">
+            <div class="highlight-icon"><i class="fas fa-rocket"></i></div>
+            <h3 class="highlight-title">Problem Solver</h3>
+            <p class="highlight-desc">Enjoys tackling complex challenges and delivering innovative solutions.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            A full-stack e-commerce solution with user authentication, payment processing, 
+                            and admin dashboard.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a class="btn btn-small btn-primary" href="https://your-ecommerce-demo.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                            <a class="btn btn-small btn-secondary" href="https://github.com/yourusername/ecommerce-platform" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">
+                            A responsive task management application with drag-and-drop functionality 
+                            and real-time updates.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a class="btn btn-small btn-primary" href="https://your-taskapp-demo.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                            <a class="btn btn-small btn-secondary" href="https://github.com/yourusername/task-management-app" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Data Visualization Dashboard</h3>
+                        <p class="project-description">
+                            Interactive dashboard for data visualization with charts, graphs, 
+                            and real-time data updates.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a class="btn btn-small btn-primary" href="https://your-dataviz-demo.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                            <a class="btn btn-small btn-secondary" href="https://github.com/yourusername/data-viz-dashboard" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-aos="fade-up">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-aos="fade-up" data-aos-delay="50">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-aos="fade-up" data-aos-delay="150">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 class="category-title">Backend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-aos="fade-up">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-aos="fade-up" data-aos-delay="50">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Full Stack Developer</h3>
+                        <span class="timeline-company">Tech Solutions Inc.</span>
+                        <span class="timeline-date">2022 - Present</span>
+                        <p class="timeline-description">Developed scalable web applications, led a team of developers, and implemented modern best practices for frontend and backend development.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Frontend Developer</h3>
+                        <span class="timeline-company">Creative Web Studio</span>
+                        <span class="timeline-date">2020 - 2022</span>
+                        <p class="timeline-description">Built responsive user interfaces, collaborated with designers, and optimized web performance for high-traffic sites.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Intern Developer</h3>
+                        <span class="timeline-company">Startup Hub</span>
+                        <span class="timeline-date">2019 - 2020</span>
+                        <p class="timeline-description">Assisted in developing MVPs, learned agile methodologies, and contributed to both frontend and backend tasks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together!</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>amjadcs2805@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+92 312 7951486</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Islamabad, Pakistan</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary glow-button btn-submit">
+                        <span class="btn-text">Send Message</span>
+                        <i class="fas fa-paper-plane btn-icon"></i>
+                        <div class="btn-glow"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Quote Section -->
+    <section class="success-quote-section" style="position: relative; overflow: hidden; margin: 3rem auto 2rem auto; max-width: 900px;">
+        <!-- Animated Background Elements (like home) -->
+        <div class="success-quote-background">
+            <div class="animated-particle"></div>
+            <div class="animated-particle"></div>
+            <div class="animated-particle"></div>
+            <div class="animated-particle"></div>
+            <div class="animated-particle"></div>
+            <div class="geometric-shape"></div>
+            <div class="geometric-shape"></div>
+            <div class="glowing-orb orb-1"></div>
+            <div class="glowing-orb orb-2"></div>
+            <div class="gradient-overlay"></div>
+        </div>
+        <blockquote class="success-quote animated-quote" data-aos="fade-up">
+            <span class="quote-mark">“</span>
+            The only limit to our realization of tomorrow will be our doubts of today.
+            <span class="quote-author">— Franklin D. Roosevelt</span>
+        </blockquote>
+        <blockquote class="success-quote animated-quote" data-aos="fade-up" data-aos-delay="200">
+            <span class="quote-mark">“</span>
+            Never rely on others to define your path to success — no one can truly show you the way. Be bold, stay determined, and success will follow your courage and commitment.
+            <span class="quote-author">— MR. AMJAD ALI</span>
+        </blockquote>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/amjad-ali-2118a2272" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <span style="display:inline-block;width:24px;height:24px;vertical-align:middle;">
+                          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                            <rect width="120" height="120" rx="24" fill="#181818"/>
+                            <path d="M86.7 33H102L73.2 67.1L106.1 107H83.2L62.7 81.7L39.6 107H24.2L54.1 70.7L22.1 33H45.6L64.1 56.1L86.7 33ZM82.7 100.1H89.9L48.1 39.1H40.5L82.7 100.1Z" fill="white"/>
+                          </svg>
+                        </span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2024 Amjad Ali. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
